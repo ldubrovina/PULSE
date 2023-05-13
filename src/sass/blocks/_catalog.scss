@@ -22,6 +22,11 @@
         transform: skewX(-25deg);
         margin: 0 5px;
         cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color;
+            border: none;
+        }
         div {
             transform: skewX(25deg);
         }
@@ -30,5 +35,8 @@
             background-color: $main-color;
             border: none;
         }
+    }
+    &__content {
+        margin-top: 60px;
     }
 }
