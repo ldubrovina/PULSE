@@ -22,6 +22,7 @@
     font-size: 41px;
     line-height: 21px;
     color: $main-color;
+    cursor: pointer;
   }
   &__subtitle {
     font-weight: 700;
@@ -34,6 +35,9 @@
     font-weight: 500;
     font-size: 14px;
     text-align: center;
+  }
+  &_mini {
+    min-height: 140px;
   }
 }
 
