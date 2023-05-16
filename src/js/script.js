@@ -42,4 +42,8 @@ $(document).ready(function () {
     $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
   });
 
+  $('.button_mini').on('click', function () {
+    $('.overlay, #order').fadeIn('slow');
+  });
+
 });
