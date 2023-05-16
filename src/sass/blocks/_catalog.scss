@@ -99,5 +99,9 @@
             font-size: 20px;
             color: #050505;
         }
+        &__wrapper {
+            display: flex;
+            width: 200%;
+        }
     }
 }
