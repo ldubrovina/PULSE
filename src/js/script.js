@@ -27,9 +27,9 @@ $(document).ready(function () {
         e.preventDefault();
         $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
         $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-      })
+      });
     });
-  };
+  }
 
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
   });
 
-  function valideForms(form) {
+  function validateForms(form) {
     $(form).validate();
     $('#consultation form').validate({
       rules: {
@@ -73,10 +73,30 @@ $(document).ready(function () {
     });
     $('#order form').validate();
   }
-  valideForms('#consultation-form');
-  valideForms('#consultation form');
-  valideForms('#order form');
+  validateForms('#consultation-form');
+  validateForms('#consultation form');
+  validateForms('#order form');
 
   $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  $('form').submit(function (e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function () {
+      $(this).find("input").val("");
+
+
+      $('form').trigger('reset');
+
+    });
+    return false;
+  });
 
 });
