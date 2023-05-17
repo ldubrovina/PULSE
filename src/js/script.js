@@ -53,7 +53,22 @@ $(document).ready(function () {
 
   $('#consultation-form').validate();
   $('#consultation form').validate({
-
+    rules: {
+      name: "required",
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: "Пожалуйста, введите свое имя",
+      phone: "Пожалуйста, введите свой номер телефона",
+      email: {
+        required: "Пожалуйста, введите свою электронную почту",
+        email: "Ваша электронная почта должна быть в формате name@domain.com"
+      }
+    }
   });
   $('#order form').validate();
 
