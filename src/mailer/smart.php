@@ -19,8 +19,8 @@ $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, 
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->setFrom('lyuda.dubrovina@yandex.ru', 'Pulse');   // От кого письмо
-$mail->addAddress('alexvolodinof@yandex.ru');     // Add a recipient
-//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addAddress('alexvolodinof@yandex.ru');     // Add a recipient
+$mail->addAddress('dubrovinalv24@gmail.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
