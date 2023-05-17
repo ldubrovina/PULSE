@@ -51,4 +51,11 @@ $(document).ready(function () {
     });
   });
 
+  $('#consultation-form').validate();
+  $('#consultation form').validate({
+
+  });
+  $('#order form').validate();
+
+
 });
